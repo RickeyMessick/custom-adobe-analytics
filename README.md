@@ -19,3 +19,4 @@ You need to customize it and install through normal plugin install. https://code
 ## Prerequisites
 
 I used ACF (advacned custom feilds) to override pagename and channel and to also add any custom ones on a per page basis.  My theme was also genesis so I used its hook.  But whatever them you are using you will just want to hook in after the body opening.
+
