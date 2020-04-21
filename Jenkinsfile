@@ -1,12 +1,24 @@
 pipeline {
   agent any
   stages {
-    stage('test1') {
+    stage('Step1') {
       environment {
         Stage = 'Stage'
       }
       steps {
         sh 'echo "step1"'
+      }
+    }
+
+    stage('Confirm') {
+      steps {
+        input(message: 'Are you sure?', id: 'deploy', ok: 'OK')
+      }
+    }
+
+    stage('Step2') {
+      steps {
+        sh 'echo "step2"'
       }
     }
 
