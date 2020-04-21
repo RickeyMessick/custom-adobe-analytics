@@ -12,13 +12,24 @@ pipeline {
 
     stage('Confirm') {
       steps {
-        input(message: 'Are you sure?', id: 'deploy', ok: 'OK')
+        input(message: 'Are you sure?', id: 'deploy-step', ok: 'Proceed')
       }
     }
 
     stage('Step2') {
-      steps {
-        sh 'echo "step2"'
+      parallel {
+        stage('Step2a') {
+          steps {
+            sh 'echo "step2a"'
+          }
+        }
+
+        stage('step2b') {
+          steps {
+            sh 'echo "step2b"'
+          }
+        }
+
       }
     }
 
