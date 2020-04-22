@@ -36,7 +36,7 @@ pipeline {
 
   }
   environment {
-    Stage = 'Stage'
-    Dev = 'Dev'
+    username = 'username'
+    password = 'password'
   }
 }
