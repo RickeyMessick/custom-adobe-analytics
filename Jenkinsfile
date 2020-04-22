@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
         sh 'echo "step1"'
+        sleep 2
       }
     }
 
