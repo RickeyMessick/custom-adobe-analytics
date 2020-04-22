@@ -41,6 +41,6 @@ echo "pass: $USER_CREDENTIALS_PSW"
 
   }
   environment {
-    USER_CREDENTIALS = 'credentials(\'rickey-local-test-creds\')'
+    USER_CREDENTIALS = 'credentials("rickey-local-test-creds")'
   }
 }
