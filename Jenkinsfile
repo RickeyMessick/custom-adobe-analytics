@@ -6,7 +6,12 @@ pipeline {
         Stage = 'Stage'
       }
       steps {
-        sh 'echo "step1"'
+        sh '''echo $USER_CREDENTIALS_USR
+echo $USER_CREDENTIALS_PSW
+
+
+
+'''
         sleep 2
       }
     }
@@ -34,5 +39,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    USER_CREDENTIALS = 'credentials(\'rickey-local-test-creds\')'
   }
 }
