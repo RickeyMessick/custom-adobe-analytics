@@ -35,8 +35,4 @@ pipeline {
     }
 
   }
-  environment {
-    username = 'username'
-    password = 'password'
-  }
 }
