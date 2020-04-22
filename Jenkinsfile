@@ -6,8 +6,8 @@ pipeline {
         Stage = 'Stage'
       }
       steps {
-        sh '''echo $USER_CREDENTIALS_USR
-echo $USER_CREDENTIALS_PSW
+        sh '''echo "username: $USER_CREDENTIALS_USR"
+echo "pass: $USER_CREDENTIALS_PSW"
 
 
 
